@@ -1,8 +1,14 @@
 {
   "name": "markdown-previewer",
-  "version": "0.1.0",
-  "private": true,
+  "homepage": "https://arthurcueio.github.io/markdown-previewer/",
+  "repository": "https://github.com/ArthurCueio/markdown-previewer.git",
+  "license": "MIT",
+  "version": "1.0.0",
+  "private": false,
   "dependencies": {
+    "gh-pages": "^2.0.1",
+    "html-react-parser": "^0.7.0",
+    "marked": "^0.6.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "2.1.8"
@@ -11,7 +17,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
