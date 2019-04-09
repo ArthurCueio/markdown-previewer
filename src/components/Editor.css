@@ -1,0 +1,15 @@
+#editor {
+  width: 100%;
+  height: calc(100% - 25px);
+  background: #212121;
+  resize: none;
+  padding: 1em;
+  overflow: auto;
+  border: none;
+  scrollbar-color: #313131 black;
+  grid-area: editor;
+}
+
+div {
+  border-right: 2px solid #757575;
+}

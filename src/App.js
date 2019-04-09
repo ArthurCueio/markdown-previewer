@@ -1,25 +1,29 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Editor from './components/Editor';
+import Preview from './components/Preview';
+import Footer from './components/Footer';
+import DEFAULT_MARKDOWN_TEXT from './data/defaultMarkdown';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      text: DEFAULT_MARKDOWN_TEXT
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+  handleChange(event) {
+    this.setState({
+      text: event.target.value
+    });
+  }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div id="main">
+        <Editor input={ this.state.text } handleChange={ this.handleChange }/>
+        <Preview input={ this.state.text }/>
+        <Footer />
       </div>
     );
   }

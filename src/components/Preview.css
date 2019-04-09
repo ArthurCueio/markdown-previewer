@@ -1,0 +1,42 @@
+#preview {
+  overflow: auto;
+  word-wrap: normal;
+  height: calc(100% - 25px);
+  padding: 0.5em;
+  scrollbar-color: #313131 black;
+  grid-area: preview;
+}
+
+#preview code {
+  font-family: monospace;
+  background: #313131;
+}
+
+#preview pre code {
+  display: block;
+  border-radius: 5px;
+  padding: 0.5em;
+}
+
+#preview table,
+#preview table td,
+#preview table th {
+  padding: 0.25em;
+  border-collapse: collapse;
+  border: 1px solid #f5f5f5;
+}
+
+#preview a {
+  color: #4f8cc9;
+}
+
+#preview blockquote {
+  background: #313131;
+  border-left: 5px solid #aaa;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+
+#preview blockquote p {
+  display: inline;
+}

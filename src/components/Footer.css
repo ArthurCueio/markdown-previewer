@@ -1,0 +1,11 @@
+footer {
+  background: #007acc;
+  grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.5em;
+}
+
+footer small {
+  line-height: 20px;
+}
